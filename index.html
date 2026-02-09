@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Happy Birthday Manya</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Great+Vibes&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ffeef8 0%, #fff5f0 50%, #f0f4ff 100%);
+            color: #5a4a42;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .page.active {
+            opacity: 1;
+            transform: translateY(0);
+            position: relative;
+        }
+
+        .page.hidden {
+            display: none;
+        }
+
+        /* PAGE 1 */
+        #page1 {
+            text-align: center;
+        }
+
+        .main-heading {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: #d4a5a5;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(212,165,165,0.3);
+        }
+
+        .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            letter-spacing: 4px;
+            color: #9b7e7e;
+            margin-bottom: 3rem;
+        }
+
+        .candles-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .candle {
+            width: 8px;
+            height: 80px;
+            background: linear-gradient(#f5deb3, #daa520);
+            border-radius: 4px;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .flame {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 25px;
+            background: radial-gradient(circle, #ffd700, #ff8c00, transparent);
+            border-radius: 50%;
+            animation: flicker 1.5s infinite;
+        }
+
+        @keyframes flicker {
+            50% { opacity: 0.7; transform: translateX(-50%) scale(0.9); }
+        }
+
+        @keyframes float {
+            50% { transform: translateY(-10px); }
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, #e8b4c8, #d4a5a5);
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(212,165,165,0.3);
+        }
+
+        /* PAGE 2 */
+        #page2 {
+            text-align: center;
+        }
+
+        .message-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #9b7e7e;
+        }
+
+        .message-text {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            font-style: italic;
+            white-space: pre-line;
+        }
+
+        /* PAGE 3 */
+        #page3 {
+            text-align: center;
+        }
+
+        .final-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .final-message {
+            max-width: 600px;
+            margin: auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .signature {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: #d4a5a5;
+            margin-top: 2rem;
+        }
+
+        .exclusive-note {
+            margin-top: 2rem;
+            font-style: italic;
+            color: #b89b9b;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <div>
+        <h1 class="main-heading">Happy Birthday</h1>
+        <h2 class="name">Manya</h2>
+
+        <div class="candles-container">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+        </div>
+
+        <button class="nav-btn" onclick="goToPage(2)">Continue</button>
+    </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page hidden" id="page2">
+    <div>
+        <h2 class="message-heading">A Special Message For You</h2>
+        <p class="message-text">
+Happy Birthday My Lady ✨
+
+Hope tum hamesha khush raho aur muskurati raho.
+
+Main dil se wish karta hoon ki tum hamesha mere saath raho,
+kyunki tum meri life ki one and only precious person ho.
+
+I really hope ki ye bond time ke saath aur strong ho,
+aur hamesha aise hi beautiful rahe… just like you.
+
+Once again,
+Happpppyyyy Birthday 🎂🎂
+        </p>
+
+        <br><br>
+        <button class="nav-btn" onclick="goToPage(3)">Continue</button>
+    </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page hidden" id="page3">
+    <div>
+        <h2 class="final-heading">Until We Celebrate Again</h2>
+        <p class="final-message">
+Thank you for being you.
+For the smiles, the warmth, and the moments that quietly mean everything.
+        </p>
+
+        <div class="signature">With all my heart</div>
+        <div class="exclusive-note">This was made only for you.</div>
+    </div>
+</div>
+
+<script>
+    function goToPage(num) {
+        const current = document.querySelector('.page.active');
+        const next = document.getElementById('page' + num);
+
+        current.classList.remove('active');
+        setTimeout(() => {
+            current.classList.add('hidden');
+            next.classList.remove('hidden');
+            setTimeout(() => next.classList.add('active'), 50);
+        }, 500);
+    }
+</script>
+
+</body>
+</html>
